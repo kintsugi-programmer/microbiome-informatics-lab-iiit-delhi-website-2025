@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Image from "next/image";
 import { Quote1,Quote2 } from '@/components/Quote'
+import Artpack from "@/components/ArtPack";
 
 export default function Home() {
   return (<>
@@ -9,7 +10,9 @@ export default function Home() {
     
     <Quote1/>
     <Quote2/></div> */}
+    
     <Intro/>
+    <Artpack/>
 
 
     </>
@@ -19,7 +22,7 @@ export default function Home() {
 
 const Intro = () => {
   return (
-    <div className='bg-white py-12 h-full text-black px-12 '>
+    <div className='bg-white pt-12 h-full text-black px-12 '>
           
           <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-400 to-neutral-900 bg-clip-text text-center text-4xl font-bold text-transparent md:text-6xl">
             <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
@@ -45,15 +48,19 @@ const Intro = () => {
           <div className='mx-auto max-w-screen-xl text-justify flex flex-col pt-12 gap-12'>
           <div>
           <div className=' flex flex-col md:flex-row gap-6 md:gap-12'>
-      <div className="flex-1">
-        <Image
-          alt="img"
-          src="/img/img1.jpg"
-          width={1280}
-          height={720}
-          className="w-full h-96 object-cover rounded-xl"
-        />
-      </div>
+      <div className="flex-1 flex items-center justify-center">
+  {/* ① wrapper now a flex-box that centers anything inside it */}
+  <Image
+    src="/art/5.png"
+    alt="img"
+    width={720}      // keeps the intrinsic 1 : 1 ratio for Next/Image
+    height={720}
+    /* ② let it shrink with breakpoints, never exceed the max-w you set */
+    className="w-auto h-auto
+               max-w-[240px] sm:max-w-[280px] md:max-w-[320px]
+               object-contain"
+  />
+</div>
       <div className="flex-1">
       <div className="flex justify-center sm:justify-start">
     <div className="text-center text-2xl font-semibold leading-tight
@@ -91,15 +98,20 @@ const Intro = () => {
         <br /><br />
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem ipsum nesciunt culpa adipisci harum quis veritatis. Distinctio magnam cumque laudantium.
         </div></div>
-      <div className="flex-1">
-        <Image
-          alt="img"
-          src="/img/img1.jpg"
-          width={1280}
-          height={720}
-          className="w-full h-96 object-cover rounded-xl"
-        />
-      </div>
+      <div className="flex-1 flex items-center justify-center">
+  {/* ① wrapper now a flex-box that centers anything inside it */}
+  <Image
+    src="/art/6.png"
+    alt="img"
+    width={720}      // keeps the intrinsic 1 : 1 ratio for Next/Image
+    height={720}
+    /* ② let it shrink with breakpoints, never exceed the max-w you set */
+    className="w-auto h-auto
+               max-w-[240px] sm:max-w-[280px] md:max-w-[320px]
+               object-contain"
+  />
+</div>
+
       
     </div>
     </div>
@@ -122,7 +134,7 @@ const Intro = () => {
       src="/img/img1.jpg"
       width={1280}
       height={720}
-      className="w-full h-96 object-cover rounded-xl"
+      className="w-full h-[70vh] object-cover rounded-xl"
     />
     <div className='flex sm:flex-row flex-col sm:gap-12 gap-6'>
     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia nihil recusandae dolorem repellendus sapiente cupiditate provident aut, accusantium modi consequuntur debitis placeat explicabo voluptates temporibus at sint numquam tenetur reprehenderit ipsum quod voluptatum! Soluta, eaque error, quam repellendus cupiditate pariatur incidunt autem at possimus provident temporibus magnam suscipit accusamus sit.

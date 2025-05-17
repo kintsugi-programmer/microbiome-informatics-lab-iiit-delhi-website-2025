@@ -12,7 +12,7 @@ const Hero = () => {
         {/* ▶︎ VIDEO */}
         <video
           className="w-full h-full rounded-3xl shadow-lg object-cover
-                     object-[50%_0%]"       /* keep horizontal centre, lift vertical focus */
+                     object-[50%_0%] filter brightness-75"       /* keep horizontal centre, lift vertical focus */
           autoPlay
           loop
           muted
