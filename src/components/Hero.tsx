@@ -5,7 +5,7 @@ const Hero = () => {
     <section className="">
       {/* Rounded, responsive-height video card */}
       <div
-        className="relative  w-full
+        className="relative p-5 w-full
                    h-[60vh] sm:h-[75vh] md:h-[90vh] lg:h-screen
                    overflow-hidden"
       >
