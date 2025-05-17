@@ -27,7 +27,9 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      ><head><meta name="apple-mobile-web-app-title" content="MI Lab" />
+
+</head>
            <DelayedLoader>{children}</DelayedLoader>
       </body>
     </html>
