@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export"
+    "export": "next export",
+    "meow": "npm i && next dev",
+    "meowmeow": "next build && next export && next start"
   },
   "dependencies": {
     "motion": "^12.12.1",
