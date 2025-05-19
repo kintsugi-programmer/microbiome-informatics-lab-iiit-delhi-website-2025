@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { AppThemeProvider} from "@/components/AppThemeProvider";
 import DelayedLoader from "@/components/DelayedLoader";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -44,7 +45,20 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="MI Lab" />
 
 </head>
-           <DelayedLoader>{children}</DelayedLoader>
+<AppThemeProvider             
+            attribute="class"
+            defaultTheme="light"
+            enableSystem
+            disableTransitionOnChange>
+<DelayedLoader>
+
+  
+    {children}
+  
+
+</DelayedLoader>
+</AppThemeProvider>
+           
       </body>
     </html>
   );
