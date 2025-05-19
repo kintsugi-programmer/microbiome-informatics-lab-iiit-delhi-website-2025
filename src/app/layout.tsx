@@ -36,8 +36,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning >
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      > // no className="dark" for only light mode
-          // no "dark" class here ➜ light theme is the only one rendered
+      > 
+      {/* no className="dark" for only light mode
+          no "dark" class here ➜ light theme is the only one rendered */}
 
         
         <head>
