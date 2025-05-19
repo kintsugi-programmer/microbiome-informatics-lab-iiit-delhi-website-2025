@@ -36,7 +36,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning >
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      ><head><meta name="apple-mobile-web-app-title" content="MI Lab" />
+      > // no className="dark" for only light mode
+          // no "dark" class here ➜ light theme is the only one rendered
+
+        
+        <head>
+        <meta name="color-scheme" content="light" />
+        <meta name="apple-mobile-web-app-title" content="MI Lab" />
 
 </head>
            <DelayedLoader>{children}</DelayedLoader>
