@@ -37,8 +37,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       > 
-      {/* no className="dark" for only light mode
-          no "dark" class here ➜ light theme is the only one rendered */}
 
         
         <head>
