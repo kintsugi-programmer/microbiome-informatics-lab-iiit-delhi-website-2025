@@ -9,7 +9,7 @@
     "lint": "next lint",
     "export": "next export",
     "meow": "npm i && next dev",
-    "meowmeow": "next build && next export && next start"
+    "meowmeow": "next build && next export && npx serve out"
   },
   "dependencies": {
     "motion": "^12.12.1",
