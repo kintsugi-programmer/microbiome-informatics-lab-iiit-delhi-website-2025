@@ -55,3 +55,117 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+---
+To deploy your statically exported **Next.js site (with `output: 'export'`)** to **GitHub Pages**, follow this clean and battle-tested setup:
+
+---
+
+## ✅ Step-by-Step GitHub Pages Deployment for `next export`
+
+### 1. **Pre-requisites**
+
+* Your project must be **using `output: 'export'`** in `next.config.js`
+* Your Git repo must be initialized and pushed to GitHub
+
+---
+
+### 2. **Install `gh-pages`**
+
+```bash
+npm install --save-dev gh-pages
+```
+
+---
+
+### 3. **Update `next.config.js`**
+
+You **must set the base path and asset prefix** if your repo is not hosted at the root domain:
+
+```js
+// next.config.js
+const repoName = 'your-repo-name'; // CHANGE THIS to your GitHub repo name
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  basePath: `/${repoName}`,
+  assetPrefix: `/${repoName}/`
+};
+
+module.exports = nextConfig;
+```
+
+---
+
+### 4. **Update `package.json`**
+
+#### Add `homepage` key:
+
+```json
+"homepage": "https://yourusername.github.io/your-repo-name",
+```
+
+#### Add scripts:
+
+```json
+"scripts": {
+  "dev": "next dev",
+  "build": "next build && next export",
+  "start": "npx serve out",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d out"
+}
+```
+
+---
+
+### 5. **Build and Deploy**
+
+```bash
+npm run deploy
+```
+
+This will:
+
+* Build and export the static site to `/out`
+* Push the contents of `/out` to the `gh-pages` branch of your repo
+
+---
+
+### 6. **Enable GitHub Pages in Repo Settings**
+
+* Go to your repo on GitHub → **Settings** → **Pages**
+* Source: select `gh-pages` branch, then `/ (root)`
+* Wait a few seconds, and your site will be live at:
+
+  ```
+  https://yourusername.github.io/your-repo-name/
+  ```
+
+---
+
+## 🧠 Tip: Automate it
+
+If you want to run everything in one go:
+
+```bash
+npm run deploy
+```
+
+That’s it! Let me know if you want this to also work with a **custom domain** or need a `CNAME` file setup.
+
+--- 
+not-found.tsx
+---
+    "dev": "next dev",
+  "build": "next build && next export",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export",
+    "meow": "npm i && next dev",
+  "meowmeow": "npm run build && npx serve@latest out"
+
+
+for handling
+Error: "next start" does not work with "output: export" configuration. Use "npx serve@latest out" instead.
