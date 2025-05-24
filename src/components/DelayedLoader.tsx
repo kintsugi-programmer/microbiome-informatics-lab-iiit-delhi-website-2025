@@ -30,7 +30,7 @@ const microbes = ["/art/1.png", "/art/2.png", "/art/3.png", "/art/4.png"];
 
 export const LoadingComp = () => {
   return (
-    <div className="fixed top-0 left-0 flex items-center justify-center w-full h-screen bg-white dark:bg-black z-50">
+    <div className="fixed top-0 left-0 flex items-center justify-center w-full h-screen bg-white  z-50">
       <div className="flex flex-col items-center justify-center text-center px-4">
         {/* Microbe Animation Row */}
         <div className="flex gap-8 mb-8">
