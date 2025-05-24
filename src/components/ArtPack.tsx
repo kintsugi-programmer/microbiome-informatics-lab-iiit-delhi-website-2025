@@ -5,7 +5,7 @@ const files = [1, 2, 3, 4, 5, 6]; // => /art/1.png … /art/6.png
 
 export default function Artpack() {
   return (
-    <div className="flex flex-wrap gap-4 justify-center items-center">
+    <div className="flex flex-wrap gap-4 justify-center items-center bg-white">
       {files.map((n) => (
         <div
           key={n}

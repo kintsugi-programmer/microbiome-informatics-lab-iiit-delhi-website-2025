@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="">
+    <section className="bg-white">
       {/* Rounded, responsive-height video card */}
       <div
         className="relative p-5 w-full
