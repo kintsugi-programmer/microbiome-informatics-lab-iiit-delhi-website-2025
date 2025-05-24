@@ -53,7 +53,7 @@ const Research = () => {
             </div>
           </div>
         </div>
-
+<hr className="border-0 border-t-2 border-slate-500" />
         {/* Section 2 */}
         <div className='flex flex-col md:flex-row gap-6 md:gap-12'>
           <div className="w-full md:w-[70%]">
@@ -79,6 +79,7 @@ const Research = () => {
             </div>
           </div>
         </div>
+<hr className="border-0 border-t-2 border-slate-500" />
 
 
          {/* Section 3 */}
@@ -105,6 +106,7 @@ This theme has two major objectives. First is to investigate and address the bas
 Under this theme, we aim to investigate the above aspect by performing functional genomic characterization of gut microbiome members and utilize these to build microbiome-derived diagnostic classifiers for different diseases and disorders. The second objective is to investigate these alterations and strive to delineate the microbiome alterations into cause and effect classes.            </div>
           </div>
         </div>
+<hr className="border-0 border-t-2 border-slate-500" />
 
         {/* Section 4 */}
         <div className='flex flex-col md:flex-row gap-6 md:gap-12'>
