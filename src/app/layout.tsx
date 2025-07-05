@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { AppThemeProvider} from "@/components/AppThemeProvider";
 import DelayedLoader from "@/components/DelayedLoader";
+import Footer from '@/components/Foot'
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -58,7 +59,7 @@ export default function RootLayout({
 
 </DelayedLoader>
 </AppThemeProvider>
-           
+           <Footer/>
       </body>
     </html>
   );
