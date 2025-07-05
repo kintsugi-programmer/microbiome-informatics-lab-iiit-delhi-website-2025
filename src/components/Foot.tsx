@@ -16,12 +16,14 @@ const Footer = () => {
       { label: 'Resources', href: '/resources' },
       { label: 'FAQs', href: '/resources#FAQs' },
       { label: 'Important Links', href: '/resources#ImpLinks' },
+      { label: 'Contact Us', href: '/contact' },
     ],
     usefulLinks: [
       { label: 'Home', href: '/' },
       { label: 'Our Team', href: '/team' },
+       { label: 'Research', href: '/research' },
       { label: 'Publications', href: '/publications' },
-      { label: 'Contact Us', href: '/contact' },
+      
     ],
   };
 

@@ -4,6 +4,8 @@ import "./globals.css";
 import { AppThemeProvider} from "@/components/AppThemeProvider";
 import DelayedLoader from "@/components/DelayedLoader";
 import Footer from '@/components/Foot'
+import Nav  from '@/components/Nav'
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -51,6 +53,10 @@ export default function RootLayout({
             defaultTheme="light"
             enableSystem
             disableTransitionOnChange>
+  <div className="sticky top-0 z-50 bg-white shadow-sm">
+    <Nav />
+  </div>
+
 <DelayedLoader>
 
   
