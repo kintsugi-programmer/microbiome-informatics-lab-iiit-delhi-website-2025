@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 const Hero = () => {
   return (
     <section className="bg-white">
@@ -12,7 +12,7 @@ const Hero = () => {
         {/* ▶︎ VIDEO */}
         <video
           className="w-full h-full rounded-3xl shadow-lg object-cover
-                     object-[50%_0%] filter brightness-75"       /* keep horizontal centre, lift vertical focus */
+                     object-[50%_0%] filter brightness-100"       /* keep horizontal centre, lift vertical focus */
           autoPlay
           loop
           muted
@@ -28,6 +28,13 @@ const Hero = () => {
                      pointer-events-none"   /* let clicks pass through if needed */
         >
           {/* Whatever you want in the middle */}
+          <Image
+                    src="/art/9.png"
+                    alt="MI Lab Logo"
+                    width={200}
+                    height={96}
+                    className="hover:scale-110 transition-transform duration-300 "
+                  />
           <h1 className="text-white text-start text-3xl font-semibold leading-tight
                 sm:text-4xl sm:leading-tight
                 md:text-5xl md:leading-tight md:text-start ">

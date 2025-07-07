@@ -4,7 +4,7 @@ import { Quote1, Quote2 } from '@/components/Quote'
 
 const Research = () => {
   return (
-    <div className='bg-white py-40 h-full text-black px-12'>
+    <div className='bg-white py-20 h-full text-black px-12'>
       <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-400 to-neutral-900 bg-clip-text text-center text-2xl font-bold text-transparent md:text-6xl">
         <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
           <div className="absolute left-0 top-[1px] bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r py-4 from-teal-500 via-blue-500 to-blue-700 [text-shadow:0_0_rgba(0,0,0,0.1)]">

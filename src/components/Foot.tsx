@@ -33,13 +33,14 @@ const Footer = () => {
         {/* Logo + Subscribe + Socials */}
         <div className="col-span-2 flex flex-col gap-6">
           <div className="flex items-center gap-4">
+            <Link href="/">
             <Image
               src="/logo.png"
               alt="Microbiome Informatics Lab IIITD Logo"
               width={200}
               height={80}
               className="transition-transform duration-300 hover:scale-110"
-            />
+            /></Link>
           </div>
 
           {/* Subscribe */}
