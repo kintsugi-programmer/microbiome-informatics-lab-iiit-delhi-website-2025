@@ -1,0 +1,46 @@
+{
+  "director": {
+    "name": "Dr. Tarini Shankar Ghosh",
+    "role": "Director, Microbiome Informatics Lab",
+    "img": "/img/tarini.png",
+    "linkedin": "https://linkedin.com/in/tarini",
+    "instagram": "https://instagram.com/tarini",
+    "email": "tarini.ghosh@iiitd.ac.in",
+    "bio": "Dr. Ghosh leads the MI Lab with a vision to understand and engineer the human microbiome for better health outcomes. "
+  },
+  "members": [
+    {
+  "name": "Ishita Sharma",
+  "role": "PhD Scholar",
+  "img": "/img/img1.jpg",
+  "linkedin": "https://linkedin.com/in/ishita",
+  "instagram": "https://instagram.com/ishita",
+  "email": "ishita@iiitd.ac.in",
+  "profile": "https://ishita.bio.link",
+  "bio": "Researching host-microbe interactions in gut health using computational biology.",
+  "experience": [
+    "Worked on gut microbiome data analysis with QIIME2",
+    "Presented at ICML Bioinformatics 2024",
+    "Led cross-lab collaboration with IIT Madras"
+  ]
+},
+    {
+      "name": "Aman Verma",
+      "role": "Research Assistant",
+      "img": "/img/img1.jpg",
+      "linkedin": "https://linkedin.com/in/amanverma",
+      "instagram": "https://instagram.com/aman",
+      "email": "aman@iiitd.ac.in",
+      "bio": "Focused on data curation and development of analytical pipelines for microbiome data."
+    },
+    {
+      "name": "Priya Nair",
+      "role": "Undergraduate Intern",
+      "img": "/img/img1.jpg",
+      "linkedin": "https://linkedin.com/in/priyanair",
+      "instagram": "https://instagram.com/priya",
+      "email": "priya@iiitd.ac.in",
+      "bio": "Working on ML-based classification models for microbial taxa."
+    }
+  ]
+}
