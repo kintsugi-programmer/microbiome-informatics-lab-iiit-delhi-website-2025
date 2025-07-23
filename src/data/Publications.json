@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Decoding Microbial Communities in Gut Ecosystems",
+    "preview": "This study explores the role of gut microbiota in nutrient absorption using multi-omics data...",
+    "pdf": "/pdfs/microbial_gut_study.pdf",
+    "image": "/img/img1.jpg"
+  },
+  {
+    "title": "AI-Powered Metagenomic Sequencing Techniques",
+    "preview": "An AI framework to identify unknown species in microbiomes...",
+    "link": "https://journals.example.com/metagenomics-ai",
+    "image": "/img/img1.jpg"
+  },
+  {
+    "title": "Future of Gut-Brain Axis Research",
+    "preview": "Ongoing research into how gut microbiota affects brain behavior and mood regulation.",
+    "image": "/img/img1.jpg"
+  }
+]
