@@ -12,7 +12,7 @@ const navLinks = [
   { label: 'Teaching', href: '/teaching' },
   { label: 'Resources', href: '/resources' },
   { label: 'FAQs', href: '/resources#FAQs' },
-  { label: 'Important Links', href: '/resources#ImpLinks' },
+  // { label: 'Important Links', href: '/resources#ImpLinks' },
   { label: 'Our Team', href: '/team' },
   { label: 'Publications', href: '/publications' },
   { label: 'Contact Us', href: '/contact' },

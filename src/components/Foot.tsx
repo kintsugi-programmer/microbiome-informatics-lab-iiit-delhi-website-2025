@@ -15,7 +15,7 @@ const Footer = () => {
             { label: 'Teaching', href: '/teaching' },
       { label: 'Resources', href: '/resources' },
       { label: 'FAQs', href: '/resources#FAQs' },
-      { label: 'Important Links', href: '/resources#ImpLinks' },
+      // { label: 'Important Links', href: '/resources#ImpLinks' },
       { label: 'Contact Us', href: '/contact' },
     ],
     usefulLinks: [
@@ -42,8 +42,8 @@ const Footer = () => {
               className="transition-transform duration-300 hover:scale-110"
             /></Link>
           </div>
-
-          {/* Subscribe */}
+{/* 
+          
           <div>
             <p className="text-base font-semibold mb-2">Subscribe to Our Newsletters</p>
             <form
@@ -87,7 +87,9 @@ const Footer = () => {
                 →
               </button>
             </form>
-          </div>
+          </div> 
+          
+          */}
 
           {/* Social Icons */}
           <div>

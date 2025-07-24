@@ -122,8 +122,9 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </p>
       </div>
 
-     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto z-10">
-  {/* Left Column - Contact Form */}
+      <div className=" max-w-6xl mx-auto z-10">
+        {/*grid grid-cols-1 md:grid-cols-2 gap-8 */}
+ {/*
   <div className="bg-white/80 border border-gray-800 p-6 rounded-xl shadow-lg">
     <h2 className="text-xl font-semibold mb-4">📩 Send us a Message</h2>
     <form onSubmit={handleSubmit} className="space-y-4">
@@ -148,7 +149,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </div>
       )}
     </form>
-  </div>
+  </div> */}
 
   {/* Right Column with 2 rows */}
   <div className="flex flex-col gap-8">

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="microbiome-informatics-lab-iiit-delhi-website-2025">Microbiome-Informatics-Lab-IIIT-Delhi-Website-2025</h1>
+<p>We are developing the official website for the Microbiome Informatics Lab at IIIT Delhi as a digital extension of the FMT Hub. The platform is being built using Next.js 15, React 19, Node.js, Tailwind CSS, and TypeScript, focusing on modular UI, SEO, and responsiveness. We’re implementing secure APIs, dynamic routing, and scalable backend architecture for seamless performance. Deployment is handled on Oracle Linux with Apache, using SSL-secured HTTPS. This site will serve as a centralized digital gateway for lab research, data resources, and collaborations.</p>
+<p>Lab Lead by Professor Dr. Tarini Shankar Ghosh
+WebDev Team Members</p>
+<ul>
+<li>Siddhant Bali</li>
+<li>Rishabh Kumar</li>
+<li>Siddharth Bhaskar
+This Document Serves as a Project Tracking, Planning and Guide for Developers of Now and Future.</li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>We are currently building the official website for the Microbiome Informatics Lab at IIIT Delhi, as a natural extension of our previous work on the FMT Hub. This project aims to establish a unified and professional digital presence for the lab, integrating research insights, personnel, publications, and data tools into a modern, performant web platform.
+The development stack includes Next.js 15, React 19, Node.js, Tailwind CSS, and TypeScript, with a focus on modular UI design, SEO optimization, and cross-device responsiveness. We're engineering dynamic routing, secure API endpoints, and scalable backend architecture to ensure smooth frontend-backend communication and future-proof extensibility. The deployment is being handled on Oracle Linux servers with Apache, using SSL-secured custom HTTPS for encrypted connections.
+In this phase, we are focusing on:</p>
+<ul>
+<li>Creating reusable component libraries for consistent lab branding.</li>
+<li>Building user-centric interfaces that highlight lab research, team profiles, and live updates.</li>
+<li>Integrating the FMT Hub data layer for seamless navigation between resources.</li>
+<li>Ensuring performance and accessibility compliance through Lighthouse audits and testing.</li>
+</ul>
+<p>This project will serve as a centralized hub for collaborators, researchers, and external stakeholders, significantly elevating the visibility and digital maturity of the Microbiome Informatics Lab.</p>
+<p>This is a <a href="https://nextjs.org">Next.js</a> project bootstrapped with <a href="https://nextjs.org/docs/app/api-reference/cli/create-next-app"><code>create-next-app</code></a>.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>First, run the development server:</p>
+<pre class="hljs"><code><div>npm run dev
+<span class="hljs-comment"># or</span>
+yarn dev
+<span class="hljs-comment"># or</span>
+pnpm dev
+<span class="hljs-comment"># or</span>
+bun dev
+</div></code></pre>
+<p>Open <a href="http://localhost:3000">http://localhost:3000</a> with your browser to see the result.</p>
+<p>You can start editing the page by modifying <code>app/page.tsx</code>. The page auto-updates as you edit the file.</p>
+<p>This project uses <a href="https://nextjs.org/docs/app/building-your-application/optimizing/fonts"><code>next/font</code></a> to automatically optimize and load <a href="https://vercel.com/font">Geist</a>, a new font family for Vercel.</p>
+<h2 id="learn-more">Learn More</h2>
+<p>To learn more about Next.js, take a look at the following resources:</p>
+<ul>
+<li><a href="https://nextjs.org/docs">Next.js Documentation</a> - learn about Next.js features and API.</li>
+<li><a href="https://nextjs.org/learn">Learn Next.js</a> - an interactive Next.js tutorial.</li>
+</ul>
+<p>You can check out <a href="https://github.com/vercel/next.js">the Next.js GitHub repository</a> - your feedback and contributions are welcome!</p>
+<h2 id="deploy-on-vercel">Deploy on Vercel</h2>
+<p>The easiest way to deploy your Next.js app is to use the <a href="https://vercel.com/new?utm_medium=default-template&amp;filter=next.js&amp;utm_source=create-next-app&amp;utm_campaign=create-next-app-readme">Vercel Platform</a> from the creators of Next.js.</p>
+<p>Check out our <a href="https://nextjs.org/docs/app/building-your-application/deploying">Next.js deployment documentation</a> for more details.</p>
+<hr>
+<p>To deploy your statically exported <strong>Next.js site (with <code>output: 'export'</code>)</strong> to <strong>GitHub Pages</strong>, follow this clean and battle-tested setup:</p>
+<hr>
+<h2 id="%E2%9C%85-step-by-step-github-pages-deployment-for-next-export">✅ Step-by-Step GitHub Pages Deployment for <code>next export</code></h2>
+<h3 id="1-pre-requisites">1. <strong>Pre-requisites</strong></h3>
+<ul>
+<li>Your project must be <strong>using <code>output: 'export'</code></strong> in <code>next.config.js</code></li>
+<li>Your Git repo must be initialized and pushed to GitHub</li>
+</ul>
+<hr>
+<h3 id="2-install-gh-pages">2. <strong>Install <code>gh-pages</code></strong></h3>
+<pre class="hljs"><code><div>npm install --save-dev gh-pages
+</div></code></pre>
+<hr>
+<h3 id="3-update-nextconfigjs">3. <strong>Update <code>next.config.js</code></strong></h3>
+<p>You <strong>must set the base path and asset prefix</strong> if your repo is not hosted at the root domain:</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// next.config.js</span>
+<span class="hljs-keyword">const</span> repoName = <span class="hljs-string">'your-repo-name'</span>; <span class="hljs-comment">// CHANGE THIS to your GitHub repo name</span>
+
+<span class="hljs-comment">/** @type {import('next').NextConfig} */</span>
+<span class="hljs-keyword">const</span> nextConfig = {
+  <span class="hljs-attr">output</span>: <span class="hljs-string">'export'</span>,
+  <span class="hljs-attr">basePath</span>: <span class="hljs-string">`/<span class="hljs-subst">${repoName}</span>`</span>,
+  <span class="hljs-attr">assetPrefix</span>: <span class="hljs-string">`/<span class="hljs-subst">${repoName}</span>/`</span>
+};
+
+<span class="hljs-built_in">module</span>.exports = nextConfig;
+</div></code></pre>
+<hr>
+<h3 id="4-update-packagejson">4. <strong>Update <code>package.json</code></strong></h3>
+<h4 id="add-homepage-key">Add <code>homepage</code> key:</h4>
+<pre class="hljs"><code><div><span class="hljs-string">"homepage"</span>: <span class="hljs-string">"https://yourusername.github.io/your-repo-name"</span>,
+</div></code></pre>
+<h4 id="add-scripts">Add scripts:</h4>
+<pre class="hljs"><code><div><span class="hljs-string">"scripts"</span>: {
+  <span class="hljs-attr">"dev"</span>: <span class="hljs-string">"next dev"</span>,
+  <span class="hljs-attr">"build"</span>: <span class="hljs-string">"next build &amp;&amp; next export"</span>,
+  <span class="hljs-attr">"start"</span>: <span class="hljs-string">"npx serve out"</span>,
+  <span class="hljs-attr">"predeploy"</span>: <span class="hljs-string">"npm run build"</span>,
+  <span class="hljs-attr">"deploy"</span>: <span class="hljs-string">"gh-pages -d out"</span>
+}
+</div></code></pre>
+<hr>
+<h3 id="5-build-and-deploy">5. <strong>Build and Deploy</strong></h3>
+<pre class="hljs"><code><div>npm run deploy
+</div></code></pre>
+<p>This will:</p>
+<ul>
+<li>Build and export the static site to <code>/out</code></li>
+<li>Push the contents of <code>/out</code> to the <code>gh-pages</code> branch of your repo</li>
+</ul>
+<hr>
+<h3 id="6-enable-github-pages-in-repo-settings">6. <strong>Enable GitHub Pages in Repo Settings</strong></h3>
+<ul>
+<li>
+<p>Go to your repo on GitHub → <strong>Settings</strong> → <strong>Pages</strong></p>
+</li>
+<li>
+<p>Source: select <code>gh-pages</code> branch, then <code>/ (root)</code></p>
+</li>
+<li>
+<p>Wait a few seconds, and your site will be live at:</p>
+<pre class="hljs"><code><div>https://yourusername.github.io/your-repo-name/
+</div></code></pre>
+</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%A7%A0-tip-automate-it">🧠 Tip: Automate it</h2>
+<p>If you want to run everything in one go:</p>
+<pre class="hljs"><code><div>npm run deploy
+</div></code></pre>
+<p>That’s it! Let me know if you want this to also work with a <strong>custom domain</strong> or need a <code>CNAME</code> file setup.</p>
+<hr>
+<h2 id="not-foundtsx">not-found.tsx</h2>
+<pre><code>&quot;dev&quot;: &quot;next dev&quot;,
+</code></pre>
+<p>&quot;build&quot;: &quot;next build &amp;&amp; next export&quot;,
+&quot;start&quot;: &quot;next start&quot;,
+&quot;lint&quot;: &quot;next lint&quot;,
+&quot;export&quot;: &quot;next export&quot;,
+&quot;meow&quot;: &quot;npm i &amp;&amp; next dev&quot;,
+&quot;meowmeow&quot;: &quot;npm run build &amp;&amp; npx serve@latest out&quot;</p>
+<p>for handling
+Error: &quot;next start&quot; does not work with &quot;output: export&quot; configuration. Use &quot;npx serve@latest out&quot; instead.</p>
+
+</body>
+</html>
