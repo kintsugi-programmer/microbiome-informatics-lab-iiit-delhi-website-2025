@@ -1,7 +1,14 @@
-// src/app/publications/page.tsx
 'use client';
+
 import publications from '@/data/Publications.json';
 import Image from 'next/image';
+
+interface Publication {
+  title: string;
+  preview: string;
+  pdf?: string;
+  image: string;
+}
 
 export default function PublicationsPage() {
   return (
@@ -11,9 +18,9 @@ export default function PublicationsPage() {
       </h1>
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {publications.map((paper, idx) => {
-          const hasLink = paper.pdf || paper.link;
-          const href = paper.pdf ?? paper.link;
+        {(publications as Publication[]).map((paper, idx) => {
+          const hasLink = Boolean(paper.pdf);
+          const href = paper.pdf;
 
           const CardContent = (
             <div className="group block bg-white rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.01] transition-all duration-300 border border-gray-100">
@@ -32,7 +39,7 @@ export default function PublicationsPage() {
                 </h2>
                 <p className="mt-2 text-sm text-gray-600">{paper.preview}</p>
                 <p className="mt-3 text-sm font-medium text-teal-600">
-                  {paper.pdf ? '➜ Read Full Paper' : paper.link ? '➜ View on Journal Site' : '🚫 Not Available'}
+                  {hasLink ? '➜ Read Full Paper' : '🚫 Not Available'}
                 </p>
               </div>
             </div>

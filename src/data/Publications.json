@@ -1,19 +1,62 @@
 [
   {
-    "title": "Decoding Microbial Communities in Gut Ecosystems",
-    "preview": "This study explores the role of gut microbiota in nutrient absorption using multi-omics data...",
-    "pdf": "/pdfs/microbial_gut_study.pdf",
-    "image": "/img/img1.jpg"
+    "title": "Predicting Gut Health using Clinical Indicators",
+    "preview": "Published in BMJ, this study investigates the gut microbiome's diagnostic potential.",
+    "pdf": "https://www.bmj.com/content/bmj/383/bmj-2023-075180.full.pdf",
+    "image": "/img/pub_10.jpg"
   },
   {
-    "title": "AI-Powered Metagenomic Sequencing Techniques",
-    "preview": "An AI framework to identify unknown species in microbiomes...",
-    "link": "https://journals.example.com/metagenomics-ai",
-    "image": "/img/Publications1.png"
+    "title": "Microbiota Composition in Gastrointestinal Disease",
+    "preview": "A research article from Gut journal exploring microbial imbalance in gut disorders.",
+    "pdf": "https://gut.bmj.com/content/69/7/1218",
+    "image": "/img/pub_1.png"
   },
   {
-    "title": "Future of Gut-Brain Axis Research",
-    "preview": "Ongoing research into how gut microbiota affects brain behavior and mood regulation.",
-    "image": "/img/img1.jpg"
+    "title": "Host-Microbiome Interactions in Health",
+    "preview": "A Nature Medicine paper detailing key microbial pathways impacting host physiology.",
+    "pdf": "https://www.nature.com/articles/s41591-020-0963-8",
+    "image": "/img/pub_2.png"
+  },
+  {
+    "title": "Microbial Ecology and Evolution",
+    "preview": "Nature Ecology & Evolution discusses microbial community dynamics over time.",
+    "pdf": "https://www.nature.com/articles/s41559-020-1236-0",
+    "image": "/img/pub_3.png"
+  },
+  {
+    "title": "Gut Microbiome as Biomarker for GI Disorders",
+    "preview": "A clinical review in Nature Reviews Gastroenterology & Hepatology.",
+    "pdf": "https://www.nature.com/articles/s41575-022-00605-x",
+    "image": "/img/pub_4.png"
+  },
+  {
+    "title": "Inflammatory Profiles and Gut Dysbiosis",
+    "preview": "Insights into inflammatory markers and microbial links in disease progression.",
+    "pdf": "https://www.nature.com/articles/s43587-022-00306-9",
+    "image": "/img/pub_5.png"
+  },
+  {
+    "title": "Machine Learning Models for Microbial Prediction",
+    "preview": "eLife article presenting computational tools for microbial community analysis.",
+    "pdf": "https://elifesciences.org/articles/50240",
+    "image": "/img/pub_6.png"
+  },
+  {
+    "title": "Microbiome Impact on Liver Function",
+    "preview": "Published in Gastroenterology, this work links microbiota to hepatic health.",
+    "pdf": "https://www.sciencedirect.com/science/article/abs/pii/S0016508520355086?via%3Dihub",
+    "image": "/img/pub_7.png"
+  },
+  {
+    "title": "Role of Probiotics in Gut Regulation",
+    "preview": "This review evaluates probiotic efficacy in maintaining microbial balance.",
+    "pdf": "https://www.tandfonline.com/doi/full/10.1080/19490976.2020.1822729",
+    "image": "/img/pub_8.png"
+  },
+  {
+    "title": "Advanced Microbiome Therapeutics",
+    "preview": "A Gastroenterology journal article on emerging gut therapy strategies.",
+    "pdf": "https://www.gastrojournal.org/article/S0016-5085(23)00622-4/fulltext?referrer=https%3A%2F%2Fpubmed.ncbi.nlm.nih.gov%2F",
+    "image": "/img/pub_9.png"
   }
 ]
