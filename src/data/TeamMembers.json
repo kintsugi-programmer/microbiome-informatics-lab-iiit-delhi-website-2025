@@ -1,46 +1,160 @@
 {
   "director": {
     "name": "Dr. Tarini Shankar Ghosh",
-    "role": "Director, Microbiome Informatics Lab",
+    "role": "Group Leader",
     "img": "/img/tarini.png",
-    "linkedin": "https://linkedin.com/in/tarini",
-    "instagram": "https://instagram.com/tarini",
+    "linkedin": "https://www.linkedin.com/in/dr-tarini-shankar-ghosh-3b211868",
+    "instagram": "",
     "email": "tarini.ghosh@iiitd.ac.in",
-    "bio": "I am a computational microbiologist focussing on the human microbiome. Using a combination of publicly available data as well as in-house generated microbiome data from specific India sub-populations, I aim to use a range of data-driven statistical, machine-learning and deep learning-based approaches to unearth the basis of resilience, assembly and stability of the human microbiome, investigate the basis of the inter-personal variability of the microbiome and utilize these insights to formulate and propose data-driven personalized and/or sub-population-level microbiome-targeted/microbiome-derived diagnostics and therapeutics. I have spearheaded a range of studies focusing on the role of gut microbiome in aging and life-style; interaction between disease-associated and aging-associated microbiome changes and; the most importantly the role of the gut microbiome as a transducer in modulating the role of a healthy diet on different aspects of host clinical phenotypes like frailty, improved cognition and behaviour. "
+    "bio": "Faculty lead of MI Lab. Research interests in microbiome and metagenomics.",
+    "profile": "",
+    "experience": []
   },
   "members": [
     {
-  "name": "Ishita Sharma",
-  "role": "PhD Scholar",
-  "img": "/img/img1.jpg",
-  "linkedin": "https://linkedin.com/in/ishita",
-  "instagram": "https://instagram.com/ishita",
-  "email": "ishita@iiitd.ac.in",
-  "profile": "https://ishita.bio.link",
-  "bio": "Researching host-microbe interactions in gut health using computational biology.",
-  "experience": [
-    "Worked on gut microbiome data analysis with QIIME2",
-    "Presented at ICML Bioinformatics 2024",
-    "Led cross-lab collaboration with IIT Madras"
-  ]
-},
-    {
-      "name": "Aman Verma",
-      "role": "Research Assistant",
-      "img": "/img/img1.jpg",
-      "linkedin": "https://linkedin.com/in/amanverma",
-      "instagram": "https://instagram.com/aman",
-      "email": "aman@iiitd.ac.in",
-      "bio": "Focused on data curation and development of analytical pipelines for microbiome data."
+      "name": "Sourav Goswami",
+      "role": "Ph.D. Student",
+      "img": "/img/sourav.png",
+      "linkedin": "https://www.linkedin.com/in/sourav-goswami-840617159/",
+      "instagram": "",
+      "email": "souravg@iiitd.ac.in",
+      "bio": "",
+      "profile": "",
+      "experience": []
     },
     {
-      "name": "Priya Nair",
-      "role": "Undergraduate Intern",
-      "img": "/img/img1.jpg",
-      "linkedin": "https://linkedin.com/in/priyanair",
-      "instagram": "https://instagram.com/priya",
-      "email": "priya@iiitd.ac.in",
-      "bio": "Working on ML-based classification models for microbial taxa."
+      "name": "Shivangi Verma",
+      "role": "Ph.D. Student",
+      "img": "/img/shivangi.png",
+      "linkedin": "https://www.linkedin.com/in/shivangi-verma-012",
+      "instagram": "",
+      "email": "shivangi22206@iiitd.ac.in",
+      "bio": "",
+      "profile": "",
+      "experience": []
+    },
+    {
+      "name": "Omprakash Ramakant Shete",
+      "role": "Ph.D. Student",
+      "img": "/img/omprakash.png",
+      "linkedin": "https://www.linkedin.com/in/omprakash-ramakant-shete-b00281187",
+      "instagram": "",
+      "email": "shete22205@iiitd.ac.in",
+      "bio": "",
+      "profile": "",
+      "experience": []
+    },
+    {
+      "name": "Abhishek Goel",
+      "role": "M.Tech Student",
+      "img": "/img/abishek.png",
+      "linkedin": "https://www.linkedin.com/in/abhishek-goel-6282b0137/",
+      "instagram": "",
+      "email": "abhishek22197@iiitd.ac.in",
+      "bio": "",
+      "profile": "",
+      "experience": []
+    },
+    {
+      "name": "Vindhya Regonda",
+      "role": "M.Tech Student",
+      "img": "/img/vindhya.png",
+      "linkedin": "https://www.linkedin.com/in/vindhya-regonda-9a3335171",
+      "instagram": "",
+      "email": "vindhya22208@iiitd.ac.in",
+      "bio": "",
+      "profile": "",
+      "experience": []
+    },
+    {
+      "name": "Lavanya CB",
+      "role": "M.Tech Student",
+      "img": "/img/lavanya.png",
+      "linkedin": "https://www.linkedin.com/in/lavanya-balasundram-79968319a",
+      "instagram": "",
+      "email": "lavanya22192@iiitd.ac.in",
+      "bio": "",
+      "profile": "",
+      "experience": []
+    },
+    {
+      "name": "Sakshi Mahajan",
+      "role": "M.Tech Student",
+      "img": "/img/sakshi.jpeg",
+      "linkedin": "https://www.linkedin.com/in/sakshi-mahajan-2668521b6/",
+      "instagram": "",
+      "email": "sakshi22204@iiitd.ac.in",
+      "bio": "",
+      "profile": "",
+      "experience": []
+    },
+    {
+      "name": "Chetan Saraf",
+      "role": "Research Associate",
+      "img": "/img/chetan_saraf.jpg",
+      "linkedin": "https://www.linkedin.com/in/chetan-sharaf-910574114/",
+      "instagram": "",
+      "email": "chetan20109@iiitd.ac.in",
+      "bio": "",
+      "profile": "",
+      "experience": []
+    },
+    {
+      "name": "Debjit Pramanik",
+      "role": "Undergrad: IP Student",
+      "img": "/img/debjit.png",
+      "linkedin": "https://www.linkedin.com/in/debjit-pramanik-88a837171/",
+      "instagram": "",
+      "email": "debjit20504@iiitd.ac.in",
+      "bio": "",
+      "profile": "",
+      "experience": []
+    },
+
+    {
+      "name": "Amit Samal",
+      "role": "Alumni: M.Tech Student",
+      "img": "/img/amit.png",
+      "linkedin": "https://www.linkedin.com/in/amit-samal-1387ab182",
+      "instagram": "",
+      "email": "amit21224@iiitd.ac.in",
+      "bio": "",
+      "profile": "",
+      "experience": []
+    },
+
+    {
+      "name": "Ankit Chaurasia",
+      "role": "Developer: B.Tech Student",
+      "img": "/img/Ankit_Chaurasia.jpg",
+      "linkedin": "https://www.linkedin.com/in/ankit-20027",
+      "instagram": "",
+      "email": "ankitc1422@gmail.com",
+      "bio": "",
+      "profile": "",
+      "experience": []
+    },
+    {
+      "name": "Amit Malik",
+      "role": "Developer: B.Tech Student",
+      "img": "/img/Amit_malik.jpg",
+      "linkedin": "https://www.linkedin.com/in/amit-malik-6a1763203",
+      "instagram": "",
+      "email": "amitnarela34@gmail.com",
+      "bio": "",
+      "profile": "",
+      "experience": []
+    },
+    {
+      "name": "Lakavath Vasanth Kumar",
+      "role": "Developer: B.Tech Student",
+      "img": "/img/Vasanth.jpg",
+      "linkedin": "https://www.linkedin.com/in/lakavath-vasanth-kumar/",
+      "instagram": "",
+      "email": "lakavath20386@iiitd.ac.in",
+      "bio": "",
+      "profile": "",
+      "experience": []
     }
   ]
 }
