@@ -41,7 +41,7 @@ const TeamPageCard = () => {
             
             {/* Left Section - Header & Description */}
             <div className="flex-1 text-center lg:text-left">
-              <h1 className="bg-gradient-to-r from-teal-500 via-blue-500 to-blue-700 bg-clip-text text-transparent text-2xl md:text-3xl font-bold mb-2">
+              <h1 className="bg-gradient-to-r from-teal-500 via-blue-500 to-blue-700 bg-clip-text text-transparent text-3xl sm:text-4xl font-extrabold leading-tight mb-2">
                 Our Team <span className="text-gray-700">@MI Lab</span>
               </h1>
               

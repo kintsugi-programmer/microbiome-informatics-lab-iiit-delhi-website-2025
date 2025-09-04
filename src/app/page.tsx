@@ -4,21 +4,24 @@ import { Quote1,Quote2 } from '@/components/Quote'
 import Artpack from "@/components/ArtPack";
 import DirectorProfile from "@/components/Director";
 import TeamPageCard from "@/components/TeamIntro";
+import ResearchPageCard from "@/components/ResearchIntro";
 
 export default function Home() {
   return (<>
   <Hero/>
- <div className="bg-white text-gray-900 min-h-screen px-4 md:px-20 py-16 font-sans">
+ <div className="bg-white text-gray-900 min-h-screen px-4 md:px-20 py-16 font-sans space-y-10">
   <DirectorProfile/>
   <TeamPageCard/>
+  <ResearchPageCard/>
+  <Quote1/>
+    <Quote2/>
   </div>
     
     
-    {/* <Quote1/>
-    <Quote2/>
+    
     
     <Intro/>
-    <Artpack/> */}
+    <Artpack/>
 
 
     </>
