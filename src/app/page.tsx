@@ -10,9 +10,10 @@ export default function Home() {
   return (<>
   <Hero/>
  <div className="bg-white text-gray-900 min-h-screen px-4 md:px-20 py-16 font-sans space-y-10">
+    <ResearchPageCard/>
   <DirectorProfile/>
   <TeamPageCard/>
-  <ResearchPageCard/>
+
   <Quote1/>
     <Quote2/>
   </div>
