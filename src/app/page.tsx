@@ -3,12 +3,17 @@ import Image from "next/image";
 import { Quote1,Quote2 } from '@/components/Quote'
 import Artpack from "@/components/ArtPack";
 import DirectorProfile from "@/components/Director";
+import TeamPageCard from "@/components/TeamIntro";
 
 export default function Home() {
   return (<>
   <Hero/>
- 
-    <DirectorProfile/>
+ <div className="bg-white text-gray-900 min-h-screen px-4 md:px-20 py-16 font-sans">
+  <DirectorProfile/>
+  <TeamPageCard/>
+  </div>
+    
+    
     {/* <Quote1/>
     <Quote2/>
     
