@@ -12,6 +12,8 @@
     "meowmeow": "npm run build && npx serve@latest out"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.0.1",
+    "@fortawesome/react-fontawesome": "^3.0.2",
     "motion": "^12.12.1",
     "next": "14.2.28",
     "next-themes": "^0.4.6",

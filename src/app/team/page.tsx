@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 import teamData from '@/data/TeamMembers.json';
 import { motion, AnimatePresence } from 'framer-motion';
+import { SiGooglescholar, SiOrcid } from 'react-icons/si';
 
 // Team Member Type
 interface TeamMember {
@@ -16,6 +17,8 @@ interface TeamMember {
   profile?: string;
   bio?: string;
   experience?: string[];
+  googleScholar?: string;
+  orcid?: string;
 }
 
 const fadeIn = {
@@ -60,15 +63,16 @@ const TeamPage = () => {
         custom={1}
         className="mb-28"
       >
-        <div className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[200px_1fr] gap-10 items-center">
+        <div className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[220px_1fr] gap-10 items-center">
           <div className="flex justify-center md:justify-start">
-            <Image
-              src={director.img}
-              alt={director.name}
-              width={180}
-              height={180}
-              className="rounded-xl object-cover shadow-md"
-            />
+            <div className="w-[180px] h-[220px] relative overflow-hidden rounded-xl shadow-md">
+              <Image
+                src={director.img}
+                alt={director.name}
+                fill
+                className="object-cover object-top"
+              />
+            </div>
           </div>
 
           <div>
@@ -102,7 +106,7 @@ const TeamPage = () => {
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeIn}
-        custom={2}
+        custom={1}
         className="mb-20"
       >
         <h2 className="text-3xl font-bold mb-10 text-center text-cyan-700">Research Team</h2>
@@ -118,29 +122,37 @@ const TeamPage = () => {
               onClick={() => setSelectedMember(member)}
               className="bg-white border rounded-2xl p-6 shadow hover:shadow-lg transition-all hover:-translate-y-2 hover:border-cyan-400 duration-300 cursor-pointer text-center"
             >
-              <Image
-                src={member.img}
-                alt={member.name}
-                width={150}
-                height={150}
-                className="rounded-xl mx-auto mb-4 object-contain shadow-sm"
-              />
+              <div className="w-[210px] h-[240px] relative overflow-hidden rounded-xl mx-auto mb-4 shadow-sm">
+                <Image
+                  src={member.img}
+                  alt={member.name}
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
               <h2 className="text-xl font-semibold">{member.name}</h2>
               <p className="text-sm text-gray-500 mb-2">{member.role}</p>
-              <div className="flex justify-center gap-4 text-lg mt-2">
+              <div className="flex justify-center gap-4 text-2xl mt-2">
                 {member.linkedin && (
-                  <a href={member.linkedin} target="_blank">
+                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
                     <FaLinkedin className="text-blue-600 hover:text-blue-800" />
                   </a>
                 )}
-                {member.instagram && (
-                  <a href={member.instagram} target="_blank">
-                    <FaInstagram className="text-pink-500 hover:text-pink-700" />
+                {member.googleScholar && (
+                  <a href={member.googleScholar} target="_blank" rel="noopener noreferrer">
+                    <SiGooglescholar className="text-blue-500 hover:text-blue-700" />
                   </a>
                 )}
-                <a href={`mailto:${member.email}`}>
-                  <FaEnvelope className="text-yellow-500 hover:text-yellow-600" />
-                </a>
+                {member.orcid && (
+                  <a href={member.orcid} target="_blank" rel="noopener noreferrer">
+                    <SiOrcid className="text-green-600 hover:text-green-800" />
+                  </a>
+                )}
+                {member.email && (
+                  <a href={`mailto:${member.email}`}>
+                    <FaEnvelope className="text-yellow-500 hover:text-yellow-600" />
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
@@ -166,31 +178,33 @@ const TeamPage = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="md:w-1/2 p-6 flex justify-center items-center bg-gradient-to-br from-teal-50 to-white">
-                <Image
-                  src={selectedMember.img}
-                  alt={selectedMember.name}
-                  width={250}
-                  height={250}
-                  className="rounded-xl object-contain shadow-md"
-                />
+                <div className="w-[250px] h-[300px] relative overflow-hidden rounded-xl shadow-md">
+                  <Image
+                    src={selectedMember.img}
+                    alt={selectedMember.name}
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
               </div>
               <div className="md:w-1/2 p-6 flex flex-col justify-between">
                 <div>
                   <h2 className="text-2xl font-bold text-gray-800">{selectedMember.name}</h2>
                   <p className="text-sm text-gray-500 mb-2">{selectedMember.role}</p>
                   {selectedMember.bio && (
-                    <p className="text-sm text-gray-700 mt-2">{selectedMember.bio}</p>
+                    <p className="text-sm text-gray-700 mt-2 leading-relaxed">{selectedMember.bio}</p>
                   )}
                   {selectedMember.profile && (
                     <a
                       href={selectedMember.profile}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-block text-sm mt-2 text-blue-600 hover:underline"
                     >
                       View Portfolio
                     </a>
                   )}
-                  {selectedMember.experience && (
+                  {selectedMember.experience && selectedMember.experience.length > 0 && (
                     <div className="mt-4">
                       <h3 className="text-sm font-semibold text-gray-800 mb-1">Experience</h3>
                       <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
@@ -201,10 +215,20 @@ const TeamPage = () => {
                     </div>
                   )}
                 </div>
-                <div className="mt-6 flex gap-4 text-xl">
+                <div className="mt-6 flex gap-4 text-2xl">
                   {selectedMember.linkedin && (
                     <a href={selectedMember.linkedin} target="_blank" rel="noopener noreferrer">
                       <FaLinkedin className="text-blue-600 hover:text-blue-800" />
+                    </a>
+                  )}
+                  {selectedMember.googleScholar && (
+                    <a href={selectedMember.googleScholar} target="_blank" rel="noopener noreferrer">
+                      <SiGooglescholar className="text-blue-500 hover:text-blue-700" />
+                    </a>
+                  )}
+                  {selectedMember.orcid && (
+                    <a href={selectedMember.orcid} target="_blank" rel="noopener noreferrer">
+                      <SiOrcid className="text-green-600 hover:text-green-800" />
                     </a>
                   )}
                   {selectedMember.instagram && (
@@ -212,9 +236,11 @@ const TeamPage = () => {
                       <FaInstagram className="text-pink-500 hover:text-pink-700" />
                     </a>
                   )}
-                  <a href={`mailto:${selectedMember.email}`}>
-                    <FaEnvelope className="text-yellow-500 hover:text-yellow-700" />
-                  </a>
+                  {selectedMember.email && (
+                    <a href={`mailto:${selectedMember.email}`}>
+                      <FaEnvelope className="text-yellow-500 hover:text-yellow-700" />
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>
